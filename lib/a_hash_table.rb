@@ -6,7 +6,7 @@ class AHashTable
 
   def initialize(table_size)
     # run a sanity check to make sure table_size is valid
-    unless valid_size?(table_size)
+    if valid_size?(table_size)
       @hsh_arry = Array.new(table_size)
     end
   end
@@ -17,5 +17,9 @@ class AHashTable
             " #{MAXIMUM_TABLE_SIZE}."
     end
     return true
+  end
+
+  def compute_hash(hsh_key)
+    hsh_key % @hsh_arry.size
   end
 end
