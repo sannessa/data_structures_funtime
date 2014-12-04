@@ -56,4 +56,13 @@ class ALinkedListTest < Test::Unit::TestCase
       assert_not_nil n
     end
   end
+
+  def test_each_with_empty_linked_list
+    # should move the curr pointer and return the node
+    a_ll = ALinkedList.new
+
+    a_ll.each do |n|
+      assert_equal nil, n
+    end
+  end
 end

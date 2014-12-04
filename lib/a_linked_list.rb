@@ -47,10 +47,14 @@ class ALinkedList
   end
 
   def each
-    curr = @head.next
-    begin
-      yield curr
-      curr = curr.next
-    end while(curr != nil)
+    if @size > 0
+
+      curr = @head.next
+
+      begin
+        yield curr
+        curr = curr.next
+      end while(curr != nil)
+    end
   end
 end
