@@ -3,8 +3,6 @@ require 'a_node'
 
 class ALinkedList
   HEAD_VAL = "**HEAD**"
-  @curr = nil
-  @size = 0
 
   # init
   def initialize
@@ -20,10 +18,6 @@ class ALinkedList
   # returns the current node
   def curr
     @curr
-  end
-
-  def next
-    @curr = @curr.next
   end
 
   def size
