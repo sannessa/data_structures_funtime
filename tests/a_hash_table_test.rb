@@ -11,6 +11,15 @@ class AHashTableTest < Test::Unit::TestCase
     end
   end
 
+  def test_insert
+    key = 3
+    val = 1899
+    tbl_size = 10
+    hsh_table = AHashTable.new(tbl_size)
+    hsh_table.insert(key, val)
+    assert_equal val, hsh_table.find(key)
+  end
+
   def test_valid_size
     tbl_size = 4
     hsh_tbl = AHashTable.new(tbl_size)

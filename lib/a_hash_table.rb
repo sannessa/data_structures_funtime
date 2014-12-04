@@ -11,6 +11,15 @@ class AHashTable
     end
   end
 
+  def insert(hsh_key, hsh_val)
+    @hsh_arry[compute_hash(hsh_key)] = hsh_val
+    hsh_val
+  end
+
+  def find(hsh_key)
+    @hsh_arry[compute_hash(hsh_key)]
+  end
+
   def valid_size?(table_size)
     if (table_size < MINIMUM_TABLE_SIZE) || (table_size > MAXIMUM_TABLE_SIZE)
       raise "Table size must be more than #{MINIMUM_TABLE_SIZE} and less than" +
