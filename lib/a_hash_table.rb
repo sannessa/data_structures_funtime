@@ -20,6 +20,10 @@ class AHashTable
     @hsh_arry[compute_hash(hsh_key)]
   end
 
+  def remove(hsh_key)
+    @hsh_arry[compute_hash(hsh_key)] = nil
+  end
+
   def valid_size?(table_size)
     if (table_size < MINIMUM_TABLE_SIZE) || (table_size > MAXIMUM_TABLE_SIZE)
       raise "Table size must be more than #{MINIMUM_TABLE_SIZE} and less than" +

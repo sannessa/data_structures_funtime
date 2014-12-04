@@ -20,6 +20,16 @@ class AHashTableTest < Test::Unit::TestCase
     assert_equal val, hsh_table.find(key)
   end
 
+  def test_remove
+    key = 8
+    val = 1899
+    tbl_size = 10
+    hsh_table = AHashTable.new(tbl_size)
+    hsh_table.insert(key, val)
+    hsh_table.remove(key)
+    assert_equal nil, hsh_table.find(key)
+  end
+
   def test_valid_size
     tbl_size = 4
     hsh_tbl = AHashTable.new(tbl_size)
