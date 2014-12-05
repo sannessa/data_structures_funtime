@@ -2,7 +2,6 @@ $:.unshift File.dirname(__FILE__)
 require 'a_linked_list'
 
 class AHashTable
-
   # arbitrary limits used for test cases
   MINIMUM_TABLE_SIZE = 1
   MAXIMUM_TABLE_SIZE = 10
@@ -19,7 +18,6 @@ class AHashTable
 
     # first check to see something exists at the index
     if @hsh_arry[index] == nil
-
       # there is nothing here, create a new linkedlist with a single node
       # containg an array of [key, val]
       a_ll = ALinkedList.new
@@ -38,13 +36,17 @@ class AHashTable
   def find(hsh_key)
     index = compute_hash(hsh_key)
     return_val = nil
-    a_ll = @hsh_arry[index]
-    a_ll.each do |n|
-      if n.val.first == hsh_key
-        return_val = n.val.last
-        break
+
+    if !empty?(index)
+      a_ll = @hsh_arry[index]
+      a_ll.each do |n|
+        if n.val.first == hsh_key
+          return_val = n.val.last
+          break
+        end
       end
     end
+
     return_val
   end
 

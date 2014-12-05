@@ -58,4 +58,9 @@ class AHashTableTest < Test::Unit::TestCase
     hsh_table = AHashTable.new(tbl_size)
     assert_equal (hsh_key % tbl_size), hsh_table.compute_hash(hsh_key)
   end
+
+  def test_find_missing_key
+    hsh_table = AHashTable.new(5)
+    assert_equal nil, hsh_table.find(14)
+  end
 end
