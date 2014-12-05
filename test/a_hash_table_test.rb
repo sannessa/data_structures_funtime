@@ -31,7 +31,7 @@ class AHashTableTest < Test::Unit::TestCase
   def test_valid_size
     tbl_size = 4
     hsh_tbl = DataStructuresFuntime::AHashTable.new(tbl_size)
-    assert_equal true, hsh_tbl.valid_size?(tbl_size), "Table size was not withing range"
+    assert_equal true, hsh_tbl.send(:valid_size?, tbl_size), "Table size was not withing range"
   end
 
   def test_valid_size_out_of_bounds
@@ -54,7 +54,7 @@ class AHashTableTest < Test::Unit::TestCase
     tbl_size = 5
     hsh_key = 10
     hsh_table = DataStructuresFuntime::AHashTable.new(tbl_size)
-    assert_equal (hsh_key % tbl_size), hsh_table.compute_hash(hsh_key)
+    assert_equal (hsh_key % tbl_size), hsh_table.send(:compute_hash, hsh_key)
   end
 
   def test_find_missing_key
