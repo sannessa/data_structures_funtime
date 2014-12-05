@@ -1,4 +1,4 @@
 data_structures_funtime
 =======================
 
-A repository to refresh an enhance my data structure knowledge
+A repository to refresh and enhance my data structure knowledge
