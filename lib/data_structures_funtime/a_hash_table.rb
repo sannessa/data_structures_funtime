@@ -24,11 +24,11 @@ module DataStructuresFuntime
         a_ll.add([hsh_key, hsh_val])
         @hsh_arry[index] = a_ll
       else
-          # there is something here so we must add it to the linkedlist
-          # with the value of the linkedlist node being an array containing
-          # the key and the value
-          a_ll = @hsh_arry[index]
-          a_ll.add([hsh_key, hsh_val])
+        # there is something here so we must add it to the linkedlist
+        # with the value of the linkedlist node being an array containing
+        # the key and the value
+        a_ll = @hsh_arry[index]
+        a_ll.add([hsh_key, hsh_val])
       end
       hsh_val
     end
