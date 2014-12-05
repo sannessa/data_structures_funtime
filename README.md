@@ -9,4 +9,4 @@ gem 'data_structures_funtime', :git => 'https://github.com/sannessa/data_structu
 
 API:
 
-http://sannessa.github.io/data_structures_funtime/
+http://sannessa.github.io/data_structures_funtime/frames.html#!file.README.html
