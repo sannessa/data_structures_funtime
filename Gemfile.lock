@@ -1,12 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    redcarpet (1.17.2)
+    redcarpet (3.2.1)
     yard (0.8.7.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  redcarpet
+  redcarpet (~> 3.2.1)
   yard (~> 0.8.7.6)
