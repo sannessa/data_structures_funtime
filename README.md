@@ -7,3 +7,6 @@ Install:
 
 Bundler:
 gem 'data_structures_funtime', :git => 'https://github.com/sannessa/data_structures_funtime'
+
+API:
+http://sannessa.github.io/data_structures_funtime/
