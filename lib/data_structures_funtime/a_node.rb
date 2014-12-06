@@ -21,11 +21,21 @@ module DataStructuresFuntime
       @next = next_node
     end
 
+    # An alias for set_next
+    def set_right(right_node)
+      set_next(right_node)
+    end
+
     # Returns the next ANode Object
     #
     # @return [ANode] the next ANode Object
     def next
       @next
+    end
+
+    # An alias for next
+    def right
+      self.next
     end
 
     # Sets the prev field of the node to the specificied ANode instance
@@ -36,11 +46,21 @@ module DataStructuresFuntime
       @prev = prev_node
     end
 
+    # An alias for set_prev
+    def set_left(left_node)
+      set_prev(left_node)
+    end
+
     # Returns the previous ANode instance
     #
     # @return [ANode] the prev ANode Object
     def prev
       @prev
+    end
+
+    # An alias for prev
+    def left
+      self.prev
     end
 
     # Sets the val field of the node to the specificied Object
